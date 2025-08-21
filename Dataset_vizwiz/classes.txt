@@ -1,0 +1,13 @@
+traffic_light
+stairs
+door
+supermarket_product
+car                    
+bus                    
+sidewalk             
+pedestrian             
+bicycle                
+obstacle               
+elevator               
+escalator              
+crosswalk 
