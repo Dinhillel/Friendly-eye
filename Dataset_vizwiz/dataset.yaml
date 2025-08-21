@@ -1,9 +1,0 @@
-path: dataset
-train: images/train
-val: images/val
-test: images/test   
-names:
-  0: traffic_light
-  1: stairs
-  2: door
-  3: supermarket_product
