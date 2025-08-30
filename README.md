@@ -1,68 +1,86 @@
-📖 Project Description
+Assistive Vision System for Visually Impaired Users
 
-This project is designed to assist visually impaired users by providing real-time communication with their surroundings.
-The system combines several AI components into a single pipeline:
+ Project Overview
+This project is an intelligent assistive technology solution designed to help visually impaired users interact with their environment through real-time computer vision and natural language processing. The system combines multiple AI components to provide seamless voice-based interaction with the visual world.
+Core Functionality
+The system enables users to ask natural language questions about their surroundings and receive spoken responses. For example:
 
-YOLO object detection to recognize objects in the environment (trained on COCO and VizWiz VQA  datasets).
+User: "What is in front of me?"
+System: "There is a red chair and a table in front of you."
 
-Speech-to-Text (STT) to capture user voice commands and questions.
+✨ Features
 
-NLP (T5) to interpret and answer user questions based on the detected objects.
+🔍 Computer Vision
+Real-time Object Detection: Uses YOLOv8 for accurate object recognition
+Multi-dataset Training: Trained on COCO and VizWiz VQA datasets
+Live Camera Feed: Processes video stream in real-time
+Confidence Scoring: Provides detection confidence levels
 
-Text-to-Speech (TTS) to provide natural voice feedback.
+🎙️ Audio Processing
+Speech-to-Text: Whisper-based voice command recognition
+Text-to-Speech: Natural voice feedback with pyttsx3
+Multi-language Support: Configurable language settings
+Voice Commands: Interactive voice-controlled interface
 
-With this pipeline, a visually impaired person can ask:
+🧠 Natural Language Processing
+Question Answering: T5-based contextual understanding
+Scene Description: Intelligent interpretation of visual context
+Conversational Interface: Natural language interaction
 
-"What is in front of me?"
+⚡ Performance
 
-The system will:
+Real-time Processing: 30 FPS camera processing
+GPU Acceleration: CUDA support for faster inference
+Optimized Models: Lightweight models for efficient processing
 
-Capture an image from the camera.
+ System Architecture
+ ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Camera Input  │───▶│ YOLO Detector   │───▶│ Object Context  │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+                                                        │
+┌─────────────────┐    ┌─────────────────┐             ▼
+│  Voice Output   │◀───│   T5 Responder  │◀───┌─────────────────┐
+└─────────────────┘    └─────────────────┘    │ Scene Analysis  │
+        ▲                                     └─────────────────┘
+        │                                              ▲
+┌─────────────────┐    ┌─────────────────┐             │
+│   TTS Engine    │◀───│ Voice Question  │─────────────┘
+└─────────────────┘    └─────────────────┘
+        ▲                        ▲
+        │                        │
+┌─────────────────┐    ┌─────────────────┐
+│    Speaker      │    │ STT (Whisper)   │
+└─────────────────┘    └─────────────────┘
+                                ▲
+                       ┌─────────────────┐
+                       │ Microphone      │
+                       └─────────────────┘
 
-Detect objects such as "chair", "table", or "person".
-
-Understand the question using the NLP model.
-
-Answer with natural speech {whisper}  user said:"what heve surrounding me?" 
-systam answer:
-"There is a red chair and a table in front of you."
-
-The project uses object databases (COCO dataset, VizWiz VQA) to recognize and describe objects, enabling a smoother human–AI.
-
-
-
-VISION MODEL/
-│── app/
-│   ├── config/        
-│   ├── main.py          # main script
-│   └── pipeline.py      
-│── vision/
-│   ├── opencv.py        # OpenCV utilities
-│   └── yolo_detector.py # YOLO object detection
-│── audio/
-│   ├── stt/             # Speech-to-Text
-│   └── tts/             # Text-to-Speech
-│── nlp/
-│   └── t5/              # T5 model for question answering
-│──Dataset_vizwiz/
+VISION_MODEL/
+├── app/
+│   ├── config.py        # Configuration settings
+│   ├── main.py          # Main application entry point
+│   └── pipeline.py      # Main processing pipeline
+├── vision/
+│   ├── opencv.py        # OpenCV camera utilities
+│   └── yolo_detector.py # YOLO object detection module
+├── audio/
+│   ├── stt.py          # Speech-to-Text processing
+│   └── tts.py          # Text-to-Speech synthesis
+├── nlp/
+│   └── t5model.py      # T5 question-answering model
+├── Dataset_vizwiz/     # VizWiz dataset (excluded from git)
 │   ├── images/
 │   │   ├── train/
 │   │   └── val/
 │   └── labels/
 │       ├── train/
 │       └── val/
- ──  download_vizwiz
-│── requirements.txt
-│── README.md
+├── download_vizwiz.py  # Dataset download script
+├── requirements.txt    # Python dependencies
+└── README.md          # This file
 
-
-
-🗂️ Dataset
-VizWiz VQA dataset for question-answering
-COCO dataset for object detection
-
- **Object Detection** using YOLO
--  **Question Answering (NLP)** using T5 model
--  **Speech-to-Text (STT)** using Whisper or another STT module
--  **Text-to-Speech (TTS)** with Coqui TTS / pyttsx3
--  Real-time camera support with OpenCV
+ Clone the Repository:
+git clone https://github.com/yourusername/EYE-Frindly.git
+cd Frindly-Eye
+                       
