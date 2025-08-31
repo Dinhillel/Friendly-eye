@@ -19,32 +19,32 @@ User: "What is in front of me?" System: "There is a red chair and a table in fro
 ⚡ Performance
 Real-time Processing: 30 FPS camera processing GPU Acceleration: CUDA support for faster inference Optimized Models: Lightweight models for efficient processing
 
+
+
 VISION_MODEL/
+
 ├── app/
-│   ├── config/          
-│   ├── main.py          
-│   └── pipeline.py      
+│ ├── config/
+│ ├── main.py
+│ └── pipeline.py
 ├── vision/
-│   ├── opencv.py       
-│   └── yolo_detector.py 
+│ ├── opencv.py
+│ └── yolo_detector.py
 ├── audio/
-│   ├── stt/           
-│   └── tts/             
+│ ├── stt/
+│ └── tts/
 ├── nlp/
-│   └── t5/              # T5 model for question answering
+│ └── t5/
 ├── Dataset/
-│   └── Data-image-captioning/
-│       ├── images/
-│       │   ├── train/
-│       │   └── val/
-│       └── labels/
-│           ├── train/
-│           └── val/
+│ └── Data-image-captioning/
+│ ├── images/
+│ │ ├── train/
+│ │ └── val/
+│ └── labels/
+│ ├── train/
+│ └── val/
 ├── requirements.txt
 └── README.md
-
-
-
 
 🗂️ Dataset
 https://www.kaggle.com/datasets/aishrules25/automatic-image-captioning-for-visually-impaired
@@ -54,4 +54,5 @@ https://www.kaggle.com/datasets/aishrules25/automatic-image-captioning-for-visua
 -  Real-time camera support with OpenCV
 
 -  Git clone- https://github.com/Dinhillel/Friendly-eye.git
+
 
