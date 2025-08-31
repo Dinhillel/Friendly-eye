@@ -58,9 +58,12 @@ Optimized Models: Lightweight models for efficient processing
 
 VISION_MODEL/
 ├── app/
-│   ├── config.py        # Configuration settings
-│   ├── main.py          # Main application entry point
-│   └── pipeline.py      # Main processing pipeline
+
+├── config.py        # Configuration settings
+
+├── main.py          # Main application entry point
+│ 
+└── pipeline.py      # Main processing pipeline
 ├── vision/
 │   ├── opencv.py        # OpenCV camera utilities
 │   └── yolo_detector.py # YOLO object detection module
@@ -81,6 +84,7 @@ VISION_MODEL/
 └── README.md          # This file
 
  Clone the Repository:
-git clone https://github.com/yourusername/EYE-Frindly.git
+git clone https://github.com/DinHillel/Eye-Frindly.git
 cd Frindly-Eye
                        
+
