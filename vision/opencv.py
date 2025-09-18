@@ -5,7 +5,7 @@ def open_camera(index=0, width=1280, height=720):
     cap = cv2.VideoCapture(index)
     cap.set(cv2.CAP_PROP_FRAME_WIDTH, width) #רוחב הפריים
     cap.set(cv2.CAP_PROP_FRAME_HEIGHT, height)# גובה הפריים
-    return cap
+    return cap         
 
 def draw_detections(frame, detections):
     for det in detections: 
@@ -16,10 +16,10 @@ def draw_detections(frame, detections):
     return frame
 
 if __name__ == "__main__":
-    # יוצרים אינסטנס של YOLO
+    # Create an instance of YOLO
     detector = YOLODetector(model_path="yolov8n.pt", conf=0.35)
 
-    # פותחים את המצלמה
+    
     cap = open_camera()
 
     while True:

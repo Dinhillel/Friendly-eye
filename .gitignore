@@ -1,1 +1,12 @@
-Dataset_vizwiz\
+Dataset_/
+ ├── images/
+ │   ├── train/
+ │   └── val/
+ ├── labels/
+ │   ├── train/
+ │   └── val/
+
+.env
+chackmaps.py
+kaggle .json
+Dataset/

@@ -4,7 +4,16 @@ from vision.opencv import open_camera, draw_detections
 from nlp.t5model import T5Responder
 from audio.tts import Speaker
 from audio.stt import record_to_file, transcribe
-from . import config
+from app.config import config
+
+def summarize_detections(detections):
+    """
+    Summarize detections into a context string.
+    """
+    if not detections:
+        return "No objects detected."
+    labels = [det['label'] if isinstance(det, dict) and 'label' in det else str(det) for det in detections]
+    return "Detected: " + ", ".join(labels)
 
 
 def run_loop():
@@ -54,7 +63,7 @@ def run_loop():
                     answer = "Sorry, I couldn't process your question."
                 print("Assistant:", answer)
                 speaker.say(answer)
-
+ 
     cap.release()
     if config.SHOW_WINDOW:
         cv2.destroyAllWindows()

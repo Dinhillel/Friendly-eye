@@ -2,8 +2,8 @@ from ultralytics import YOLO
 import torch
 
 class YOLODetector:
-    def __init__(self, model_path="yolov8n.pt", conf=0.35, device=None):
-        # load the model
+    def __init__(self, model_path="yolov8n.pt", conf=0.50, device=None):
+        # load the model 
         self.model = YOLO(model_path)
         
         
