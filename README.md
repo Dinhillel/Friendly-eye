@@ -1,3 +1,5 @@
+<img width="1024" height="1024" alt="logo" src="https://github.com/user-attachments/assets/961e9df4-8088-4eb6-9d65-de36511b245a" />
+
 Assistive Vision System for Visually Impaired people
 
 Project Overview:
@@ -16,6 +18,8 @@ User: "What is in front of me?" System: "There is a red chair and a table in fro
 
 ⚡ Performance
 Real-time Processing: 30 FPS camera processing GPU Acceleration: CUDA support for faster inference Optimized Models: Lightweight models for efficient processing
+
+ Googel cloud   Maps- for nevegation  
 
 VISION MODEL/
 │── app/
@@ -39,6 +43,7 @@ Data-image-captioning
 │   └── labels/
 │       ├── train/
 │       └── val/
+    ── MAPS-             # nevegation street
 │── requirements.txt
 │── README.md
 
@@ -59,4 +64,5 @@ git clone https://github.com/Dinhillel/Friendly-eye.git
 
 
 git clone https://github.com/Dinhillel/Friendly-eye.git
+
 
