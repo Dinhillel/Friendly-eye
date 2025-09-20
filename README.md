@@ -22,27 +22,27 @@ Real-time Processing: 30 FPS camera processing GPU Acceleration: CUDA support fo
  Googel cloud   Maps- for nevegation  
 
 VISION MODEL/
-│── app/
-│   ├── config/        
-│   ├── main.py         
-│   └── pipeline.py      
-│── vision/
-│   ├── opencv.py       
-│   └── yolo_detector.py # YOLO object detection
-    └── ocr.py
-│── audio/
-│   ├── stt/             # Speech-to-Text
-│   └── tts/             # Text-to-Speech
-│── nlp/
-│   └── t5/              # T5 model for question answering
-│──Dataset/
+ app/
+   config/        
+   ├── main.py         
+   └── pipeline.py      
+ vision/
+    opencv.py       
+   yolo_detector.py # YOLO object detection
+     ocr.py
+audio/
+   stt/             # Speech-to-Text
+   tts/             # Text-to-Speech
+   nlp/
+    t5/              # T5 model for question answering
+Dataset/
 Data-image-captioning
-│   ├── images/
-│   │   ├── train/
-│   │   └── val/
-│   └── labels/
-│       ├── train/
-│       └── val/
+    images/
+       train/
+       val/
+    labels/
+        train/
+        val/
     ── MAPS-             # nevegation street
 │── requirements.txt
 │── README.md
@@ -51,7 +51,7 @@ Data-image-captioning
 
 🗂️ Dataset
 (https://www.kaggle.com/datasets/aishrules25/automatic-image-captioning-for-visually-impaired)
-COCO dataset for object detection
+Data-image-captioning for object detection
 
  **Object Detection** using YOLO
 -  **Question Answering (NLP)** using T5 model
@@ -61,8 +61,5 @@ COCO dataset for object detection
 
 git clone https://github.com/Dinhillel/Friendly-eye.git
 
-
-
-git clone https://github.com/Dinhillel/Friendly-eye.git
 
 
